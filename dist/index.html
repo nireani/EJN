@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="input" /><button id="getRoster">Get Roster</button>
+    <div id="container"></div>
+
+    <script id="player-template" type="text/x-handlebars-template">
+        {{#each playe}}
+        <div class="player">
+        <p class="name"> {{ firstName }} {{ lastName }}</p>
+        <p class="jersey"> {{ jersey }}</p>
+        <img class="image" src="{{ img }}" onerror="this.src='https://us.123rf.com/450wm/twinsterphoto/twinsterphoto1808/twinsterphoto180800112/107927781-anonymous-and-faceless-man-under-hoodie-with-arms-crossed-isolated-over-dark-background-incognito-an.jpg?ver=6';">
+        <p class="position"> {{ pos }}</p>
+        </div>
+        {{/each}}
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.2/handlebars.min.js"></script>
+    <script src="/jquery/dist/jquery.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

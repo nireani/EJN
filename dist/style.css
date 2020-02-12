@@ -1,0 +1,42 @@
+body {
+    background-color: lightgrey;
+}
+#container {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.image {
+    max-width: 300px;
+    background-color: lightgray;
+}
+.player{
+    background-color: orange;
+    padding: 10px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.25em;
+    border-radius: 10px;
+}
+#input{
+    width: calc(100vw - 170px);
+    margin: 0 auto;
+    height: 2.4em;
+}
+#getRoster{
+    width: 140px;
+    height: 2em;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+@media screen and (max-width: 1050px) {
+    #container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 700px) {
+    #container {
+        grid-template-columns: 1fr;
+    }
+}
